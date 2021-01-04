@@ -1,0 +1,1050 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>.....</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<style>
+html,body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	font-size:12px ;
+}
+
+.pc-slide {
+	width:100%;
+	margin: 0 auto;
+}
+
+.view .swiper-container {
+	width: 100%;
+	/*height: 600px;*/
+}
+
+.view .arrow-left {
+	background: url(img/index_tab_l.png) no-repeat left top;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -25px;
+	width: 28px;
+	height: 51px;
+	z-index: 10;
+}
+
+.view .arrow-right {
+	background: url(img/index_tab_r.png) no-repeat left bottom;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -25px;
+	width: 28px;
+	height: 51px;
+	z-index: 10;
+}
+
+.preview {
+	width: 100%;
+	margin-top: 10px;
+	position: relative;
+}
+
+.preview .swiper-container {
+	width: 100%;
+}
+
+.preview .swiper-slide {
+	/*width: 87px;*/
+	/*height: 82px;*/
+	cursor:pointer;
+}
+
+.preview .slide6 {
+	width: 82px;
+}
+
+.preview img {
+	padding: 1px;
+}
+
+.preview .active-nav img {
+	padding: 0;
+	border: 1px solid #F00;
+}
+.position{
+	width:80%;
+	/*height:200px;*/
+	z-index: 800;
+	margin: auto;
+	margin-top:-190px;
+}
+.tabs{
+	width:100%;
+	height:40px;
+	display: flex;
+	margin-top:150px;
+}
+.tabs div{
+	flex: 1;
+	text-align: center;
+	line-height: 40px;
+	color:black;
+	border-top:3px solid transparent;
+	background-color: #f1f2f6;
+}
+.tabs div.actived{
+	border-top:3px solid red;
+}
+.cont{
+	background-color:rgba(255,255,255,.3);
+	width:100%;
+	/*padding:20px 0;*/
+	/*height: 150px;*/
+	position: absolute;
+	bottom:40px;
+}
+@media only screen and (min-width:1025px){
+	.cont{
+		padding:20px 0;
+	}
+}
+.cont div{
+	display: none;
+}
+	.color,.car,.ns{
+		/*width:50%;*/
+		display: flex;
+		margin: auto;
+		padding-left: 0;
+		text-align: center;
+	}
+	.color li,.car li,.ns li{
+		list-style: none;
+		width:18%;
+		margin: 10px;
+		color:white;
+	}
+    .color li>span:nth-child(1){
+		width:100%;
+		display: block;
+		height:50px;
+		margin-bottom: 10px;
+		background-color: white;
+	}
+   .color li span.colorActivited,.ns li.cActivited{
+	   border:2px solid #0090FF;
+   }
+	.car{
+		margin:10px auto;
+	}
+	.car li{
+		position: relative;
+	}
+  .car li>img{
+	  width:100%;
+	  border:1px solid black;
+	  position: absolute;
+	  top:0;
+	  left:0;
+	  right:0;
+	  bottom:0;
+	  margin: auto;
+  }
+ .ns li{
+	 width:18%;
+	 background-color: rgba(255,255,255,.4);
+ }
+/*.ns li.cActivited{*/
+	/*border:2px solid */
+/*}*/
+.ns li>span:nth-child(1){
+	width:100%;
+	display: block;
+	height:30px;
+    padding-top: 5px;
+	font-size: 10px;
+	background-color:transparent;
+	color:black;
+	}
+.ns li>span:nth-child(2) img{
+	/*width:96%;*/
+	width:96%;
+	display: block;
+	margin: auto;
+	/*padding: 2px;*/
+}
+#a{
+	width: 100%;
+	background:url("img/lg/1/1.png") no-repeat,url("img/cq/1/1.png") no-repeat,url("img/ds/1-2.png") no-repeat,url("img/ds/1-1.png") no-repeat,url("img/ds/1.jpg") no-repeat;
+	background-size: cover;
+}
+#b{
+	width: 100%;
+	background:url("img/lg/1/2.png") no-repeat,url("img/cq/1/2.png") no-repeat,url("img/ds/2-1.png") no-repeat,url("img/ds/2.jpg") no-repeat;
+	background-size: cover;
+}
+#c{
+	width: 100%;
+	background:url("img/lg/1/3.png") no-repeat,url("img/cq/1/3.png") no-repeat,url("img/ds/3-1.png") no-repeat,url("img/ds/3.jpg") no-repeat;
+	background-size: cover;
+}
+#d{
+	width: 100%;
+	background:url("img/lg/1/4.png") no-repeat,url("img/cd/1.png") no-repeat,url("img/cq/1/4.png") no-repeat,url("img/ds/4.jpg") no-repeat;
+	background-size: cover;
+}
+#e{
+	width: 100%;
+	background:url("img/ns/1/1.png") no-repeat,url("img/ns/1/2.png") no-repeat,url("img/ns/1/3.png") no-repeat,url("img/ns/1/5.png") no-repeat;
+	background-size: cover;
+}
+	#foot{
+		height:200px;
+		background:url('img/beijing.png')  no-repeat;
+		background-size:cover;
+		/*padding-bottom: 20px;*/
+	}
+	.cover{
+		width:100%;
+		height:100%;
+		background-color: rgba(0,0,0,.8);
+		position:fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		/*margin: auto;*/
+		z-index: 900;
+		display: none;
+	}
+	.m_center{
+		width:50%;
+		height:80%;
+		background-color: white;
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+		margin: auto;
+		/*height:*/
+	}
+	.cover p{
+		font-size: 12px;
+	}
+</style>
+<div class="wrapper" style="width:100%;">
+	<div class="logo" style="position: absolute;top:10px;left:10px;z-index: 800">
+		<img src="img/logo2.png" alt="" style="width:30%">
+	</div>
+	<div class="pc-slide">
+		<div class="view">
+			<div class="swiper-container viewP">
+				<a class="arrow-left" href="#"></a>
+				<a class="arrow-right" href="#"></a>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" id="a">
+						<img src="img/sss.png" style="width: 100%">
+					</div>
+					<div class="swiper-slide" id="b">
+
+						<img src="img/sss.png" style="width: 100%">
+					</div>
+					<div class="swiper-slide" id="c">
+
+						<img src="img/sss.png" style="width: 100%">
+					</div>
+					<div class="swiper-slide" id="d">
+
+						<img src="img/sss.png" style="width: 100%">
+					</div>
+					<div class="swiper-slide" id="e">
+
+						<img src="img/sss.png" style="width: 100%">
+					</div>
+				</div>
+			</div>
+
+			</div>
+		 <div class="preview position">
+			 <span style="position: absolute;bottom:100px;right:10px;z-index: 999;font-size:40px;" class="close">×</span>
+			 <div class="swiper-container">
+				 <div class="swiper-wrapper tabs">
+					 <div class="swiper-slide tab actived">
+						 车漆
+					 </div>
+					 <div class="swiper-slide tab">
+						 车顶和车轮
+					 </div>
+					 <div class="swiper-slide tab">
+						 内饰
+					 </div>
+				 </div>
+				 <div class="cont">
+					 <div style="display:block">
+						 <ul class="color" style="width:60%">
+							 <li id="black">
+								 <span class="colorActivited" style="background: url(img/small/1.png) no-repeat;background-size:100% 100%"></span>
+								 <span>纯黑色</span>
+							 </li>
+							 <li id="yin">
+								 <span style="background: url(img/small/3.png) no-repeat;background-size:100% 100%"></span>
+								 <span>冷光银</span>
+							 </li>
+							 <li id="blue">
+								 <span style="background: url(img/small/2.png) no-repeat;background-size:100% 100%"></span>
+								 <span>深海蓝</span>
+							 </li>
+							 <li id="white">
+								 <span style="background: url(img/small/4.png) no-repeat;background-size:100% 100%"></span>
+								 <span>珍珠白</span>
+							 </li>
+							 <li id="red">
+								 <span style="background: url(img/small/5.png) no-repeat;background-size:100% 100%"></span>
+								 <span>中国红</span>
+							 </li>
+						 </ul>
+					 </div>
+					 <div>
+						 <ul class="car" style="width:80%">
+							 <li id="cd1"><img src="img/small/cd1.png" alt=""></li>
+							 <li id="cd2"><img src="img/small/cd2.png" alt=""></li>
+							 <span style="display: block;width:1px;height:50px;border-left:1px solid black;margin: 20px"></span>
+							 <li id="lg1"><img src="img/small/cl1.png" alt=""></li>
+							 <li id="lg2"><img src="img/small/cl2.png" alt=""></li>
+							 <li id="lg3"><img src="img/small/cl3.png" alt=""></li>
+							 <!--<span style="display: block;width:1px;height:50px;border-left:1px solid black;margin: 20px"></span>-->
+							 <!--<li><img src="" alt=""></li>-->
+						 </ul>
+					 </div>
+					 <div>
+						 <center>
+							 <ul class="ns" style="width:66%;">
+								 <li id="ns1" class="cActivited">
+									 <span>白色高级内饰</span>
+									 <span>
+									    <img src="img/part1.png" alt="">
+										 <!--<img src="img/small/n1_01.png" alt="">-->
+										 <!--<img src="img/small/n1_10.png" alt="">-->
+										 <!--<img src="img/small/n1_17.png" alt="">-->
+									</span>
+								 </li>
+								 <li id="ns2">
+									 <span>黑色高级内饰</span>
+									 <span>
+										<!--<img src="img/small/n2_02.png" alt="">-->
+										 <!--<img src="img/small/n2_11.png" alt="">-->
+										 <!--<img src="img/small/n2_18.png" alt="">-->
+									  <img src="img/part2.png" alt="">
+									</span>
+								 </li>
+								 <li id="ns3">
+									 <span>黑色高级内饰/浅色顶蓬</span>
+									 <span>
+										<!--<img src="img/small/n3_03.png" alt="">-->
+										 <!--<img src="img/small/n3_12.png" alt="">-->
+										 <!--<img src="img/small/n3_15.png" alt="">-->
+									  <img src="img/part3.png" alt="">
+								 </span>
+								 </li>
+								 <li id="ns4">
+									 <span>浅米色高级内饰</span>
+									 <span>
+										<!--<img src="img/small/n4_04.png" alt="">-->
+										 <!--<img src="img/small/n4_08.png" alt="">-->
+										 <!--<img src="img/small/n4_19.png" alt="">-->
+									  <img src="img/part4.png" alt="">
+								 </span>
+								 </li>
+								 <li id="ns5">
+									 <span>黑色织物内饰</span>
+									 <span>
+										<!--<img src="img/small/n5_05.png" alt="">-->
+										 <!--<img src="img/small/n5_13.png" alt="">-->
+										 <!--<img src="img/small/n5_20.png" alt="">-->
+									  <img src="img/part5.png" alt="">
+								 </span>
+								 </li>
+							 </ul>
+						 </center>
+
+					 </div>
+				 </div>
+			 </div>
+
+		</div>
+
+	</div>
+
+	<div id="foot">
+
+		<div style="border-radius: 10px;display:inline-block;vertical-align: top;width: 42%;height:180px;margin-left:1%;margin-top:10px;background-color:rgba(144, 144, 144, 0.43); ">
+
+
+			<div style="margin-left:1%;display: inline-block;vertical-align: top;width: 33%;height: 190px;background-color: #ffffff;border-radius: 10px;position: relative; margin-top: -5px;">
+				<div style="display: table;height: 48px;width: 90%;margin: 0 auto;border-bottom: 1px solid #cecece;    line-height: 48px;">
+					<div style="display: table-cell;vertical-align: middle">
+						<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+						上汽集团
+					</div>
+				</div>
+				<div style="height: 94px;width: 90%;margin: 0 auto;">
+					<font style="color:#999;font-size: 12px">名爵HS</font>
+					<br>
+					<center><img src="img/img.jpg" alt="" style="height: 50px;margin-top:15px;"></center>
+
+				</div>
+				<div style="height: 48px;background-color: #2c2c2c;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;color:#5AA0CA;text-align: center;    line-height: 48px;">
+					￥：863,000
+				</div>
+			</div>
+
+			<div style="display: inline-block;margin-top: 20px;vertical-align: top;width: 30%;height: 135px;margin-left:1%;background-color: #ffffff;border-radius: 10px;box-sizing: border-box;" class="tj" id="tj1">
+				<div style="display: table;height: 34px;width: 90%;margin: 0 auto;border-bottom: 1px solid #cecece;vertical-align: middle;line-height: 34px" class="title">
+					<div style="display: table-cell;vertical-align: middle">
+						<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+						尊享升级1
+					</div>
+				</div>
+				<div style="height: 67px;width: 90%;margin: 0 auto;box-sizing: border-box;" class="tjCont">
+					<ul style="list-style: none;padding-left: 0;margin: 0">
+						<li><span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>空气过滤</li>
+						<li><span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>高级音响</li>
+						<li><span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>座椅加热</li>
+					</ul>
+				</div>
+				<div style="display: table;height: 34px;width: 90%;margin: 0 auto;border-top: 1px solid #cecece;text-align: center;padding-top: 5px">
+					￥：5400
+				</div>
+			</div>
+
+			<div style="display: inline-block;margin-top: 20px;vertical-align: top;width: 30%;height: 135px;margin-left:1%;background-color: #ffffff;border-radius: 10px; box-sizing: border-box;" class="tj" id="tj2">
+				<div style="display: table;height: 25%;width: 90%;margin: 0 auto;border-bottom: 1px solid #cecece;" class="title">
+					<div style="display: table-cell;vertical-align: middle">
+						<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+						尊享升级2
+					</div>
+				</div>
+				<div style="height: 50%;width: 90%;margin: 0 auto;box-sizing: border-box;" class="tjCont">
+					<ul style="list-style: none;padding-left: 0;margin: 0">
+						<li><span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>自动驾驶</li>
+
+					</ul>
+				</div>
+				<div style="display: table;height: 25%;width: 90%;margin: 0 auto;border-top: 1px solid #cecece;text-align: center;padding-top: 5px">
+					￥：3260
+				</div>
+			</div>
+
+		</div><!--
+		--><div style="border-radius: 10px;display:inline-block;vertical-align: top;width: 42%;height:180px;margin-left:1%;margin-top:10px;background-color:rgba(144, 144, 144, 0.43);">
+
+		<div style="display: inline-block;margin-top: 20px;vertical-align: middle;width: 30%;height: 135px;margin-left:2%;background-color: #ffffff;border-radius: 10px;">
+			<div style="display: table;height: 34px;width: 90%;margin: 0 auto;border-bottom: 1px solid #cecece;">
+				<div style="display: table-cell;vertical-align: middle">
+					<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+					车漆
+				</div>
+			</div>
+			<div style="height: 67px;width: 90%;margin: 0 auto;">
+				<ul style="list-style: none;padding-left: 0;margin: 0">
+					<li id="cheqili">
+						<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>
+					</li>
+
+				</ul>
+			</div>
+			<div style="display: table;height: 34px;width: 90%;margin: 0 auto;border-top: 1px solid #cecece;text-align: center;padding-top: 5px" id="cheqiprice">
+			</div>
+		</div>
+
+		<div style="display: inline-block;margin-top: 20px;vertical-align: middle;width: 30%;height: 135px;margin-left:2%;background-color: #ffffff;border-radius: 10px;">
+			<div style="display: table;height: 25%;width: 90%;margin: 0 auto;border-bottom: 1px solid #cecece;">
+				<div style="display: table-cell;vertical-align: middle">
+					<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+					轮毂
+				</div>
+			</div>
+			<div style="height: 50%;width: 90%;margin: 0 auto;">
+				<ul style="list-style: none;padding-left: 0;margin: 0">
+					<li id="lunguli">
+						<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>
+					</li>
+				</ul>
+
+			</div>
+			<div style="display: table;height: 25%;width: 90%;margin: 0 auto;border-top: 1px solid #cecece;text-align: center;padding-top: 5px" id="lunguprice">
+			</div>
+		</div>
+
+		<div style="display: inline-block;margin-top: 20px;vertical-align: middle;width: 30%;height: 135px;margin-left:2%;background-color: #ffffff;border-radius: 10px;">
+			<div style="display: table;height: 25%;width: 90%;margin: 0 auto;border-bottom: 1px solid #cecece;">
+				<div style="display: table-cell;vertical-align: middle">
+					<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+					内饰
+				</div>
+			</div>
+			<div style="height: 50%;width: 90%;margin: 0 auto;">
+				<ul style="list-style: none;padding-left: 0;margin: 0">
+					<li id="neishili">
+						<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>
+					</li>
+				</ul>
+			</div>
+			<div style="display: table;height: 25%;width: 90%;margin: 0 auto;border-top: 1px solid #cecece;text-align: center;padding-top: 5px" id="neishiprice">
+
+			</div>
+		</div>
+
+	</div><!--
+		--><div style="display:inline-block;vertical-align: top;width: 12%;height:190px;margin-left:1%;margin-top:5px;margin-right:1%;">
+		<div style="height:45%;background-color: #2d2d2d;margin-top: 5%">
+			<div style="height: 50%;width: 80%;border-bottom: solid 2px #808286;margin: 0 auto">
+				<div style="display: table-cell;vertical-align: middle;color:white;line-height: 50px">
+					<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+					现金价格
+				</div>
+			</div>
+			<div style="height:50%;width: 80%;margin: 0 auto;line-height: 35px;color:white;" id="xjjg"></div>
+		</div>
+		<div style="height:45%;background-color: #ca0000;">
+			<div style="height: 50%;width: 80%;border-bottom: solid 2px #f1f1f1;margin: 0 auto">
+				<div style="display: table-cell;vertical-align: middle;color:white;line-height:50px">
+					<span style="width:2px;height:15px;background-color:#007aff;display: inline-block;vertical-align: middle;margin-left: 5px"></span>
+					贷款方案
+				</div>
+			</div>
+			<div style="height: 50%;width: 80%;margin: 0 auto;line-height: 35px;color:white;" id="dkjd"></div>
+		</div>
+
+	</div>
+
+	</div>
+
+	<div class="cover cover1">
+		<span style="position: absolute;top:0;right:10px;z-index: 999;font-size:50px;color:white" class="cover_close">×</span>
+        <div class="m_center">
+            <div class="cover_img" style="border-bottom:2px solid #999;">
+				<img src="img/coverImg1.png" alt="" style="width:96%;margin: 2%">
+			</div>
+			<div class="partOne" style="width:96%;margin: auto;height:auto;overflow-y: scroll">
+                <ul style="width:100%;display: flex;list-style: none;font-size: 16px;padding-left: 0">
+					<li style="flex: 1;">
+						<div style="width:100%;display: table">
+							<div style="width:5%;float: left;height: 100%">
+								<span style="width:8px;height:8px;background-color: #999999;border-radius: 50%;display: inline-block;margin-top: 20px"></span>
+							</div>
+							<div style="width:90%;float: left;height: 100%">
+								<p style="margin:10px 0">HEPA 空气过滤系统有效防止病毒和细菌进入驾驶室</p>
+							</div>
+						</div>
+						<div style="width:100%;display: table">
+							<div style="width:5%;float: left;height: 100%">
+								<span style="width:8px;height:8px;background-color: #999999;border-radius: 50%;display: inline-block;margin-top: 20px"></span>
+							</div>
+							<div style="width:90%;float: left;height: 100%">
+								<p style="margin:10px 0">通过两个活性碳净化过滤器阻止刺激性异味、氮氧化合物和碳氢化合物废气污染驾驶室空气</p>
+							</div>
+						</div>
+					</li>
+					<li style="flex: 1">
+						<div style="width:100%;display: table">
+							<div style="width:5%;float: left;height: 100%">
+								<span style="width:8px;height:8px;background-color: #999999;border-radius: 50%;display: inline-block;margin-top: 20px"></span>
+							</div>
+							<div style="width:90%;float: left;height: 100%">
+								<p style="margin:10px 0">专为Tesla超静音驾驶室定制的高级音响系统</p>
+							</div>
+						</div>
+						<div style="width:100%;display: table">
+							<div style="width:5%;float: left;height: 100%">
+								<span style="width:8px;height:8px;background-color: #999999;border-radius: 50%;display: inline-block;margin-top: 20px"></span>
+							</div>
+							<div style="width:90%;float: left;height: 100%">
+								<p style="margin:10px 0">零下气候套件，包括后排座椅加热、方向盘加热、雨刷除霜器和清洗器喷嘴加热功能</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<p style="width:96%;margin: auto;line-height: 50px">
+			<span style="float: left;font-size: 22px;margin-top:30px">上汽选装辅件营销展示系统Demo</span>
+			<span style="float: right"><img src="img/logo.png" alt="" style="height:90px;margin-top: 10px"></span>
+		</p>
+	</div>
+
+
+	<div class="cover cover2">
+		<span style="position: absolute;top:0;right:10px;z-index: 999;font-size:50px;color:white" class="cover_close">×</span>
+		<div class="m_center">
+			<div class="cover_video" style="border-bottom:2px solid #999;">
+				<video controls="controls" poster="http://www.atscloud.cn/Demo/img/video.png" style="width:96%;margin: 2%">
+					<source src="http://www.atscloud.cn/Demo/img/1.mp4">
+				</video>
+			</div>
+			<div class="part2" style="width:96%;margin: auto;height:auto;overflow-y: scroll">
+			  <p style="font-size: 20px;font-weight: bold">全自动驾驶</p>
+              <p>
+				  <span>&#x3000;</span><span>&#x3000;</span>
+				  升级套件包含的摄像头数量增加了一倍，达到 8 个，从而在几乎所有情况下都可实现全自动驾驶——我们相信自动驾驶的安全性至少是人类驾驶平均水平的两倍。
+				  整套系统的设计旨在使车辆能够进行短距离和长距离自动驾驶而无需驾驶员座位上的乘客采取任何操作。在已启用自动充电连接功能的超级充电站，甚至连为车辆插入充电装置也不需要人工干预。
+			  </p>
+				<p>
+					<span>&#x3000;</span><span>&#x3000;</span>
+					您只需在出发地上车，将目的地告诉您的特斯拉即可。如果您没有发出指示，特斯拉将会查看您的日历并根据其中的行程安排将您送往目的地；如果日历行程为空，则直接将您送回住宅地址。特斯拉会为您计算最优路线，经过城市街道（即使没有车道线）
+					、有信号灯的复杂路口、停车标志、环岛、高速公路，最终将您送达指定的地点。当您到达目的地后，只需在停车场入口下车，您的特斯拉会进入车位搜索模式，在停车场内自动寻找停车位并停车。当您返回时，使用手机将特斯拉［召唤］至您的身边即可。
+				</p>
+				<p>
+					<span>&#x3000;</span><span>&#x3000;</span>
+					请注意，自动驾驶功能的应用需通过大量因不同地域而不同的软件合法性确认，并获得当地法律、法规的许可
+				</p>
+				<p>
+					<span>&#x3000;</span><span>&#x3000;</span>
+					因此上述各项功能元件能否在某地区实际获得并运用尚存不确定性，其将决定于所在地区的法律法规的许可情况。同时请注意，虽然您可以使用自动
+					驾驶的特斯拉车辆接送朋友和家人，但如果用于车辆共享、叫车服务等营利性服务，则须获得“特斯拉网络”的许可，相关细节将在明年公布。
+				</p>
+			</div>
+
+
+
+		</div>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/mobile-util.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+	// if($('.cover').is(':disabled')){
+    //     var Bheight=$('body').height();
+    //     var Pheight=Bheight*($('.m_center').height()/100);
+    //     // var Hheight=document.querySelector('.cover_video').clientHeight;
+    //     var Hheight=$('.cover_video').height();
+    //     console.log(Bheight,Pheight,Hheight,Pheight-Hheight);
+	// }
+
+    // $('.part2').css('max-height',Pheight-Hheight)
+</script>
+<script>
+    // var tj = 0;
+	
+	if(window.localStorage.getItem("dev")==1){
+		$(".footer").css("display","none")
+	}
+    var tjj1 = 0;
+    var tjj2 = 0;
+    var tjp0 = 0;
+    var tjp1 = 5400;
+    var tjp2 = 3260;
+    var cq = 1;
+    var cqname1 = "纯黑色";
+    var cqname2 = "冷光银";
+    var cqname3 = "深海蓝";
+    var cqname4 = "珍珠白（多层涂）";
+    var cqname5 = "中国红（多层涂）";
+    var cq1 = 0;
+    var cq2 = 1620;
+    var cq3 = 1620;
+    var cq4 = 2150;
+    var cq5 = 2690;
+    var cd = 1;
+    var cdname1="玻璃全景天窗（固定式）";
+    var cdname2="玻璃全景天窗（可开式）";
+    var cd1 = 0;
+    var cd2 = 2150;
+    var lg = 1;
+    var lgname1 = '19 英寸银色轮毂';
+    var lgname2 = '19 英寸碳黑滑流轮毂';
+    var lgname3 = '21 英寸碳黑双涡轮轮毂';
+    var lgp1 = 0;
+    var lgp2 = 1260;
+    var lgp3 = 4850;
+    var ns = 1;
+    var nsName1 = "白色高级内饰";
+    var nsName2 = "黑色高级内饰";
+    var nsName3 = "黑色高级内饰 / 浅色顶篷";
+    var nsName4 = "浅米色高级内饰";
+    var nsName5 = "黑色织物内饰";
+    var nsp1 = 3550;
+    var nsp2 = 3550;
+    var nsp3 = 3550;
+    var nsp4 = 3550;
+    var nsp5 = 0;
+
+    var orgPirce = 86130;
+	
+	// var hHeight = $("html").height();
+	// var hHeight = $(".view").height()+$("#foot").height()+20;
+	// console.log(hHeight);
+    // $(".cover").css("height",hHeight);
+//	var hWidth = $("html").width();
+//
+//
+//	var w = (1920*hHeight)/1200;
+//	w = Math.ceil(w);
+//
+//	$("html").css("width",w+"px");
+
+    price();
+
+
+   // $("#foot").css("height","300px");
+//    $("#foot").css("background","url('img/beijing.png')  no-repeat");
+//    $("#foot").css("backgroundSize","cover");
+
+ $('.tabs .tab').click(function () {
+		 $('.close').show();
+		 $('.cont').show();
+        $(this).addClass('actived').siblings().removeClass('actived');
+        $(".cont>div").eq($(this).index()).show().siblings().hide();
+ });
+ $('.color li span').click(function () {
+     $(this).addClass('colorActivited');
+     $(this).parent('li').siblings().find('span:nth-child(1)').removeClass('colorActivited');
+ });
+    $('.ns li').click(function () {
+        // console.log($(this).index());
+        $(this).addClass('cActivited');
+        $(this).addClass('cActivited').siblings().removeClass('cActivited');
+    });
+    $('.close').click(function(){
+        $(this).hide();
+        $('.cont').hide();
+	});
+    $('.cover_close').click(function(){
+        $('.cover').hide();
+        var vvv = document.getElementsByTagName("video")[0];
+        vvv.pause();
+	});
+
+    $("#black").click(function () {
+        cq = 1;
+        changeImg();
+        price();
+    });
+    $("#yin").click(function () {
+        cq = 2;
+        changeImg();
+        price();
+    });
+    $("#blue").click(function () {
+        cq = 3;
+        changeImg();
+        price();
+    });
+    $("#white").click(function () {
+        cq = 4;
+        changeImg();
+        price();
+    });
+    $("#red").click(function () {
+        cq = 5;
+        changeImg();
+        price();
+    });
+    $("#lg1").click(function () {
+        lg = 1;
+        changeImg();
+        price();
+    });
+    $("#lg2").click(function () {
+        lg = 2;
+        changeImg();
+        price();
+    });
+    $("#lg3").click(function () {
+        lg = 3;
+        changeImg();
+        price();
+    });
+    $("#cd1").click(function () {
+        cd = 1;
+        changeImg();
+        price();
+    });
+    $("#cd2").click(function () {
+        cd = 2;
+        changeImg();
+        price();
+    });
+    $("#ns1").click(function () {
+        ns = 1;
+        changeImg();
+        price();
+    });
+    $("#ns2").click(function () {
+        ns = 2;
+        changeImg();
+        price();
+    });
+    $("#ns3").click(function () {
+        ns = 3;
+        changeImg();
+        price();
+    });
+    $("#ns4").click(function () {
+        ns = 4;
+        changeImg();
+        price();
+    });
+    $("#ns5").click(function () {
+        ns = 5;
+        changeImg();
+        price();
+    });
+    $("#tj1").click(function () {
+		tj = 1;
+        changeImg();
+        price();
+    });
+    $("#tj2").click(function () {
+        tj = 2;
+        changeImg();
+        price();
+    });
+    $(".tj .title").click(function () {
+        var i=$(this).parent($('.tj')).index();
+        $('.cover'+i).show();
+        var Bheight=$('body').height();
+        var Pheight=Bheight*($('.m_center').height()/100);
+        var Hheight=$('.cover_video').height();
+        var Mheight=$('.cover_img').height();
+        // console.log(Bheight,Pheight,Hheight,Pheight-Hheight);
+        $('.part2').css('max-height',Pheight-Hheight-10);
+        $('.partOne').css('max-height',Pheight-Mheight-10);
+    });
+
+    $('.cover_video').click(function(){
+        android.video(true);
+	});
+    $(".tj .tjCont").click(function () {
+        var i=$(this).parent($('.tj')).index();
+//        console.log($(this).css("border"));
+        if ($(this).parent($('.tj')).css("border")=="0px none rgb(0, 0, 0)"){
+            $(this).parent($('.tj')).css("border","2px solid #5AA0CA");
+            if (i===1){
+                tjj1 = 1;
+			}
+            if (i===2){
+                tjj2 = 1;
+            }
+            price();
+        }else {
+            $(this).parent($('.tj')).css("border","none");
+            if (i===1){
+                tjj1 = 0;
+            }
+            if (i===2){
+                tjj2 = 0;
+            }
+            changeImg();
+            price();
+		}
+
+    });
+var viewSwiper = new Swiper('.view .swiper-container', {
+	on:{
+		slideChangeTransitionStart: function() {
+		    updateNavPosition()
+	    }
+	}
+});
+
+$('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
+	e.preventDefault();
+	if (viewSwiper.activeIndex == 0) {
+		viewSwiper.slideTo(viewSwiper.slides.length - 1, 1000);
+		return
+	}
+	viewSwiper.slidePrev()
+});
+$('.view .arrow-right,.preview .arrow-right').on('click', function(e) {
+	e.preventDefault()
+	if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+		viewSwiper.slideTo(0, 1000);
+		return
+	}
+	viewSwiper.slideNext()
+});
+
+var previewSwiper = new Swiper('.preview .swiper-container', {
+	//visibilityFullFit: true,
+	slidesPerView: 'auto',
+	allowTouchMove: false,
+	 on:{
+//         slideChangeTransitionEnd: function () {//每一个动画执行完产生的下标值，，，，首次加载会输出下标
+//             console.log(this.realIndex);
+//             console.log(previewSwiper.clickedIndex);
+//             viewSwiper.slideTo(previewSwiper.clickedIndex)
+//         },
+//	 	tap: function() {
+//	 	    viewSwiper.slideTo(previewSwiper.clickedIndex)
+//	     },
+	 	click:function(){
+	 	    if(previewSwiper.clickedIndex===0){
+                viewSwiper.slideTo(1)
+			}
+            if(previewSwiper.clickedIndex===1){
+                viewSwiper.slideTo(3)
+            }
+            if(previewSwiper.clickedIndex===2){
+                viewSwiper.slideTo(4)
+            }
+	 	},
+	 }
+})
+
+function updateNavPosition() {
+		$('.preview .active-nav').removeClass('active-nav')
+		var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+		if (!activeNav.hasClass('swiper-slide-visible')) {
+			if (activeNav.index() > previewSwiper.activeIndex) {
+				var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+				previewSwiper.slideTo(activeNav.index() - thumbsPerNav)
+			} else {
+				previewSwiper.slideTo(activeNav.index())
+			}
+		}
+	}
+    function changeImg() {
+        $("#a").css("background",'url("img/lg/'+lg+'/1.png") no-repeat,url("img/ds/1-1.png") no-repeat,url("img/cq/'+cq+'/1.png") no-repeat,url("img/ds/1-2.png") no-repeat,url("img/ds/1.jpg") no-repeat');
+        $("#a").css("backgroundSize",'cover');
+        $("#b").css("background",'url("img/lg/'+lg+'/2.png") no-repeat,url("img/ds/2-1.png") no-repeat,url("img/cq/'+cq+'/2.png") no-repeat,url("img/ds/2.jpg") no-repeat');
+        $("#b").css("backgroundSize",'cover');
+        $("#c").css("background",'url("img/lg/'+lg+'/3.png") no-repeat,url("img/ds/3-1.png") no-repeat,url("img/cq/'+cq+'/3.png") no-repeat,url("img/ds/3-1.png") no-repeat,url("img/ds/3.jpg") no-repeat');
+        $("#c").css("backgroundSize",'cover');
+        $("#d").css("background",'url("img/lg/'+lg+'/4.png") no-repeat,url("img/cd/'+cd+'.png") no-repeat,url("img/cq/'+cq+'/4.png") no-repeat,url("img/ds/4.jpg") no-repeat');
+        $("#d").css("backgroundSize",'cover');
+        if(ns===1){
+            $("#e").css("background",'url("img/ns/'+ns+'/1.png") no-repeat,url("img/ns/'+ns+'/2.png") no-repeat,url("img/ns/'+ns+'/3.png") no-repeat,url("img/ns/'+ns+'/5.png") no-repeat');
+            $("#e").css("backgroundSize",'cover');
+        }
+        if(ns===2){
+            $("#e").css("background",'url("img/ns/'+ns+'/1.png") no-repeat,url("img/ns/'+ns+'/2.png") no-repeat,url("img/ns/'+ns+'/4.png") no-repeat');
+            $("#e").css("backgroundSize",'cover');
+        }
+        if(ns===3){
+            $("#e").css("background",'url("img/ns/'+ns+'/1.png") no-repeat,url("img/ns/'+ns+'/3.png") no-repeat');
+            $("#e").css("backgroundSize",'cover');
+        }
+        if(ns===4){
+            $("#e").css("background",'url("img/ns/'+ns+'/1.png") no-repeat,url("img/ns/'+ns+'/3.png") no-repeat');
+            $("#e").css("backgroundSize",'cover');
+        }
+        if(ns===5){
+            $("#e").css("background",'url("img/ns/'+ns+'/1.png") no-repeat,url("img/ns/'+ns+'/2.png") no-repeat,url("img/ns/'+ns+'/3.png") no-repeat,url("img/ns/'+ns+'/5.png") no-repeat');
+            $("#e").css("backgroundSize",'cover');
+        }
+    }
+
+    function price() {
+
+        var price = orgPirce;
+
+        if (cq===1){
+            price+=cq1;
+            $("#cheqili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+cqname1);
+            $("#cheqiprice").html("");
+        }
+        if (cq===2){
+            price+=cq2;
+            $("#cheqili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+cqname2);
+            $("#cheqiprice").html("￥："+cq2);
+        }
+        if (cq===3){
+            price+=cq3;
+            $("#cheqili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+cqname3);
+            $("#cheqiprice").html("￥："+cq3);
+        }
+        if (cq===4){
+            price+=cq4;
+            $("#cheqili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+cqname4);
+            $("#cheqiprice").html("￥："+cq4);
+        }
+        if (cq===5){
+            price+=cq5;
+            $("#cheqili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+cqname5);
+            $("#cheqiprice").html("￥："+cq5);
+        }
+
+        if (lg===1){
+            price+=lgp1;
+            $("#lunguli").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+lgname1);
+            $("#lunguprice").html("");
+        }
+        if (lg===2){
+            price+=lgp2;
+            $("#lunguli").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+lgname2);
+            $("#lunguprice").html("￥："+lgp2);
+        }
+        if (lg===3){
+            price+=lgp3;
+            $("#lunguli").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+lgname3);
+            $("#lunguprice").html("￥："+lgp3);
+        }
+
+        if (cd===1){
+            price+=cd1;
+        }
+        if (cd===2){
+            price+=cd2;
+        }
+
+        if (ns===1){
+            price+=nsp1;
+            $("#neishili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+nsName1);
+            $("#neishiprice").html("￥："+nsp1);
+        }
+        if (ns===2){
+            price+=nsp2;
+            $("#neishili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+nsName2);
+            $("#neishiprice").html("￥："+nsp2);
+        }
+        if (ns===3){
+            price+=nsp3;
+            $("#neishili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+nsName3);
+            $("#neishiprice").html("￥："+nsp3);
+        }
+        if (ns===4){
+            price+=nsp4;
+            $("#neishili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+nsName4);
+            $("#neishiprice").html("￥："+nsp4);
+        }
+        if (ns===5){
+            price+=nsp5;
+            $("#neishili").html('<span style="background-color:red;width:5px;height:5px;display: inline-block;border-radius: 50%;vertical-align: middle;margin-right: 5px"></span>'+nsName5);
+            $("#neishiprice").html("");
+        }
+
+        if (tjj1===1){
+            price+=tjp1;
+		} else if (tjj1===0){
+            price+=tjp0;
+		}
+
+        if (tjj2===1){
+            price+=tjp2;
+        } else if (tjj2===0){
+            price+=tjp0;
+        }
+
+        var fenqiPrice = price/36;
+        fenqiPrice=fenqiPrice.toFixed(0);
+        $("#xjjg").html("￥："+price);
+        $("#dkjd").html("￥："+fenqiPrice+"/月");
+
+    }
+
+</script>
+</body>
+</html>
