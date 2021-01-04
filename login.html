@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上汽选装辅件营销展示系统Demo</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+
+        html,body{
+            width: 100%;
+            /*height: 100%;*/
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /*background-color: gray;*/
+        }
+
+    </style>
+</head>
+<body>
+<div id="aa">
+    <div style="margin-top: 30%;margin-left: 9%;position: absolute; color: #1b5db2;font-size: 14px;font-family: youyuan;font-weight: bold;">用户名&nbsp;<input style="width: 170px;margin-left:10px;height: 26px;border-radius: 5px;border: 1px solid #969696;background-color: transparent;" type="text" placeholder="" id="userName"></div>
+    <div style="margin-top: 36%;margin-left: 9%;position: absolute;color: #1b5db2;font-size: 14px;font-family: youyuan;font-weight: bold;">密<font style="visibility:hidden">码</font>码&nbsp;<input style="width: 120px;margin-left:10px;height: 26px;border-radius: 5px;border: 1px solid #969696;background-color: transparent;" type="password" placeholder="" id="password"></div>
+    <div style="margin-top: 42%;margin-left: 9%;position: absolute;color: #1b5db2;font-size: 14px;font-family: youyuan;font-weight: bold;"><button style="border: 1px black solid;width: 55px;height: 25px;border-radius: 5px;background: #888888;" id="login">登录</button><button style="border: 1px black solid;width: 55px;height: 25px;border-radius: 5px;background: #888888;margin-left: 15px;">注册</button></div>
+    <img src="img/lgbk2.png" style="position: absolute;right: 0px;top: 0px;width: 100%;z-index: -1;">
+</div>
+
+
+
+
+</body>
+<script>
+    $(function () {
+        
+        if (is_iPad()){
+            $("#aa").html('<div style="margin-top: 34%;margin-left: 11%;position: absolute; color: #1b5db2;font-size: 14px;font-family: youyuan;font-weight: bold;">用户名&nbsp;<input style="width: 170px;margin-left:10px;height: 26px;border-radius: 5px;border: 1px solid #969696;background-color: transparent;" type="text" placeholder="" id="userName"></div>'+
+                '<div style="margin-top: 40%;margin-left: 11%;position: absolute;color: #1b5db2;font-size: 14px;font-family: youyuan;font-weight: bold;">密<font style="visibility:hidden">码</font>码&nbsp;<input style="width: 120px;margin-left:10px;height: 26px;border-radius: 5px;border: 1px solid #969696;background-color: transparent;" type="password" placeholder="" id="password"></div>'+
+                '<div style="margin-top: 46%;margin-left: 11%;position: absolute;color: #1b5db2;font-size: 14px;font-family: youyuan;font-weight: bold;"><button style="border: 1px black solid;width: 55px;height: 25px;border-radius: 5px;background: #888888;" id="login">登录</button><button style="border: 1px black solid;width: 55px;height: 25px;border-radius: 5px;background: #888888;margin-left: 15px;">注册</button></div>'+
+                '<img src="img/lgbk.png" style="position: absolute;right: 0px;top: 0px;width: 100%;z-index: -1;">');
+        }else {
+
+        }
+
+        $("#login").click(function () {
+            if ($("#password").val()==="666666"){
+                location.href="index.html";
+            }
+        });
+		
+		var href = location.href;
+		if(href.indexOf("dev")!=-1){
+			window.localStorage.setItem("dev",1);
+		}
+    });
+    function is_iPad(){
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/iPad/i)=="ipad") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+</script>
+</html>
